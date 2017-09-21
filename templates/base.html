@@ -5,8 +5,14 @@
     <title>Title</title>
 </head>
 <body>
-    <h1>This is a Heading</h1>
-    <p>This is a paragraph.{ html_var }</p>
+    <h1>Hello World!</h1>
+<p>
+    This is {{ html_var }} coming through
+</p>
+<ul>
+    {% for i in num %}
+    <li>{{ i }}</li>
+    {% endfor %}
+</ul>
 </body>
 </html>
-
