@@ -2,17 +2,14 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>{% block head_title %}Hey{% endblock %}</title>
+{% include "snippets/css.html" %}
 </head>
 <body>
-    <h1>Hello World!</h1>
-<p>
-    This is {{ html_var }} coming through
-</p>
-<ul>
-    {% for i in num %}
-    <li>{{ i }}</li>
-    {% endfor %}
-</ul>
+{% include "snippets/nav.html" %}
+<div class="container">
+{% block content %}{% endblock %}
+</div>
+{% include "snippets/js.html" %}
 </body>
 </html>
